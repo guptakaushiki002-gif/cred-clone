@@ -1,0 +1,69 @@
+@font-face {
+    font-family:"Gilroy";
+    src: local("Gilroy"), url("./Gilroy-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family:"Gilroy";
+    font-weight: 300;
+    src: local("Gilroy"), url("./Gilroy-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family:"Gilroy";
+    font-weight: 500;
+    src: local("Gilroy"), url("./Gilroy-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family:"Gilroy";
+    font-weight: 600;
+    src: local("Gilroy"), url("./Gilroy-Semibold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family:"Gilroy";
+    font-weight: 700;
+    src: local("Gilroy"), url("./Gilroy-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family:"Gilroy";
+    font-weight: 800;
+    src: local("Gilroy"), url("./Gilroy-Extrabold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family:"Denton";
+    src: local("Denton"), url("./Denton-Black.otf") format("truetype");
+}
+
+@font-face {
+    font-family:"Denton";
+    font-weight: 300;
+    src: local("Denton"), url("./Denton-Black.otf") format("truetype");
+}
+
+@font-face {
+    font-family:"Denton";
+    font-weight: 500;
+    src: local("Denton"), url("./Denton-Medium.otf") format("truetype");
+}
+
+/* @font-face {
+    font-family:"Gilroy";
+    font-weight: 600;
+    src: local("Gilroy"), url("./Denton-Semibold.otf") format("truetype");
+} */
+
+@font-face {
+    font-family:"Denton";
+    font-weight: 700;
+    src: local("Denton"), url("./Denton-Bold.otf") format("truetype");
+}
+
+/* @font-face {
+    font-family:"Gilroy";
+    font-weight: 800;
+    src: local("Gilroy"), url("./Denton-Extrabold.otf") format("truetype");
+} */

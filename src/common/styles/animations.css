@@ -1,0 +1,106 @@
+.hamburger {
+  display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-width: medium 1px;
+    border-style: none solid;
+      background-color: transparent;
+    border-color: currentcolor rgba(255, 255, 255, 0.2);
+    border-image: initial;
+    color: inherit;
+    padding: 22px;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+
+
+.hamburger-box {
+  width: 20px;
+    height: 21px;
+    display: inline-block;
+    position: relative;
+    align-items: center;
+}
+
+.hamburger-inner {
+  display: block;
+
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 22px;       /* was 35px — thinner like CRED */
+  height: 2.5px;     /* was 4px  — much thinner */
+  background-color: var(--white);
+  border-radius: 1px; /* was 4px — subtler rounding */
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 600ms;                          /* was 0.15s — slower, smoother */
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1); /* was ease — CRED's elastic curve */
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -7px;  /* was -10px — tighter gap for thinner bars */
+}
+
+.hamburger-inner::after {
+  bottom: -7px; /* was -10px */
+}
+
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 1.5s;                          /* was 0.13s */
+  transition-delay: 0.1s;                              /* was 0.13s */
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1); /* was cubic-bezier(0.55, 0.055, 0.675, 0.19) */
+}
+
+.hamburger--collapse .hamburger-inner::after {
+  top: -14px; /* was -20px — matches new gap */
+  transition:
+    top 0.2s 0.15s cubic-bezier(0.23, 1, 0.32, 1),   /* was cubic-bezier(0.33333, 0.66667, 0.66667, 1) */
+    opacity 0.1s linear;
+}
+
+.hamburger--collapse .hamburger-inner::before {
+  transition:
+    top 0.12s 0.15s cubic-bezier(0.23, 1, 0.32, 1),  /* was cubic-bezier(0.33333, 0.66667, 0.66667, 1) */
+    transform 0.55s cubic-bezier(0.23, 1, 0.32, 1);  /* was 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19) */
+}
+
+.hamburger--collapse.is-active .hamburger-inner {
+  transform: translate3d(0, -7px, 0) rotate(-45deg); /* was -10px — matches new gap */
+  transition-delay: 0.18s;                            /* was 0.22s */
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1); /* was cubic-bezier(0.215, 0.61, 0.355, 1) */
+}
+
+.hamburger--collapse.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  transition:
+    top 0.2s cubic-bezier(0.23, 1, 0.32, 1),         /* was cubic-bezier(0.33333, 0, 0.66667, 0.33333) */
+    opacity 0.1s 0.18s linear;                        /* was 0.22s */
+}
+
+.hamburger--collapse.is-active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(-90deg);
+  transition:
+    top 0.1s 0.1s cubic-bezier(0.23, 1, 0.32, 1),   /* was cubic-bezier(0.33333, 0, 0.66667, 0.33333) */
+    transform 0.55s 0.18s cubic-bezier(0.23, 1, 0.32, 1); /* was 0.13s 0.25s */
+}
